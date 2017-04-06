@@ -1,9 +1,11 @@
 netapp Cookbook
 ===============
 This cookbook will install and configure the following NetApp software for usage:
-*NetApp On Command API Services*
-*NetApp On Command Service Level Manager* (API Services Replacement)
+
+*NetApp On Command API Services* or *NetApp On Command Service Level Manager* (API Services Replacement)
+
 *NetApp On Command Unified Manager*
+
 *NetApp On Command Performance Manager*
 
 Requirements
@@ -17,7 +19,7 @@ This cookbook depends on the yum-mysql-community, yum-epel, and redhat_subscript
 Attributes
 ----------
 #### netapp::default
-There are no default attributes.
+
 
 #### netapp::api-slm
 

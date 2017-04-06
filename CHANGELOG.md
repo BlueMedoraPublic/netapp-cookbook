@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the netapp cookbook.
 
 0.1.0
 -----
-- [Dylan Myers] - Initial release of netapp
+- [Dylan Myers] - Initial release of netapp, currently only API-S/SLM install (api-slm recipe) works
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
