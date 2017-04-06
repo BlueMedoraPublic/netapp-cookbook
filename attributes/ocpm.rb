@@ -11,4 +11,8 @@ default[:netapp][:ocpm][:password] = "some_password"
   
 # Port
 default[:netapp][:ocpm][:port] = "8443"
+  
+# Location of the installer media
+default[:netapp][:ocpm][:media] = ''
+
 default[:netapp][:ocpm]

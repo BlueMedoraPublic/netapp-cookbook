@@ -8,10 +8,9 @@ This cookbook will install and configure the following NetApp software for usage
 
 Requirements
 ------------
-This cookbook depends on the yum-mysql-community cookbook in order to enable the correct MySQL repositories
+This cookbook depends on the yum-mysql-community, yum-epel, and redhat_subscription_manager cookbooks in order to enable the correct prerequisite repositories
 
-**Prerequisites:** yum-epel must be in the run list before this cookbook in order to enable the primary epel repository.
-Other epel repositories, such as debuginfo and source are at the discretion of the user.
+**Prerequisites:** The default recipe of this cookbook handles all calls to dependency cookbooks to set things up correctly
 
 **Compatibility:** Red Hat 7.x Only
 
@@ -32,7 +31,7 @@ There are no default attributes.
 Usage
 -----
 #### netapp::default
-This recipe just runs the api-slm recipe, as that is the most commonly used.
+Performs default actions needed for all other recipes, such as enabling the MySQL 5.6 repository
 
 #### netapp::api-slm
 This recipe installs On Command API Services or Service Level Manager.

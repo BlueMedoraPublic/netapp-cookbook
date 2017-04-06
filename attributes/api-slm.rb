@@ -11,4 +11,8 @@ default[:netapp][:api][:password] = "some_password"
   
 # Port
 default[:netapp][:api][:port] = "8443"
+  
+# Location of the installer media
+default[:netapp][:api][:media] = ''
+
 default[:netapp][:api]
