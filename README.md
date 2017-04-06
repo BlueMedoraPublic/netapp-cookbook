@@ -1,61 +1,54 @@
 netapp Cookbook
 ===============
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook will install and configure the following NetApp software for usage:
+*NetApp On Command API Services*
+*NetApp On Command Service Level Manager* (API Services Replacement)
+*NetApp On Command Unified Manager*
+*NetApp On Command Performance Manager*
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+This cookbook depends on the yum-mysql-community cookbook in order to enable the correct MySQL repositories
 
-e.g.
-#### packages
-- `toaster` - netapp needs toaster to brown your bagel.
+**Prerequisites:** yum-epel must be in the run list before this cookbook in order to enable the primary epel repository.
+Other epel repositories, such as debuginfo and source are at the discretion of the user.
+
+**Compatibility:** Red Hat 7.x Only
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
 #### netapp::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['netapp']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+There are no default attributes.
+
+#### netapp::api-slm
+
+
+#### netapp::ocpm
+
+
+#### netapp::ocum
+
 
 Usage
 -----
 #### netapp::default
-TODO: Write usage instructions for each cookbook.
+This recipe just runs the api-slm recipe, as that is the most commonly used.
 
-e.g.
-Just include `netapp` in your node's `run_list`:
+#### netapp::api-slm
+This recipe installs On Command API Services or Service Level Manager.
+Please see the attributes above for the settings applicable to this recipe.
 
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[netapp]"
-  ]
-}
+#### netapp::ocpm
+This recipe installs On Command Performance Manager.
+Please see the attributes above for the settings applicable to this recipe.
+
+#### netapp::ocum
+This recipe installs On Command Unified Manager.
+Please see the attributes above for the settings applicable to this recipe.
 ```
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write your change
@@ -65,4 +58,7 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors:
+  Dylan Myers <https://github.com/Dylan-M>
+
+License: This software is licensed under: ???
