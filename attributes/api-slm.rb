@@ -8,7 +8,7 @@
 # Maintenance User
 # default[:netapp][:api][:username] = "maint"
 default[:netapp][:api][:password] = "SomePassword1!"
-  
+
 # Port
 default[:netapp][:api][:port] = "8443"
 
@@ -23,3 +23,12 @@ default[:netapp][:api][:media] = "#{node[:netapp][:api][:media_path]}#{node[:net
 
 # Temporary location
 default[:netapp][:api][:tmp] = '/tmp/netapp-media'
+
+# The below section is a WIP
+# Array of HTTP Rest calls
+# default[:netapp][:api][:config] = [[]]
+# Examples
+# default[:netapp][:api][:config][:storage] = 
+# 
+#
+#
