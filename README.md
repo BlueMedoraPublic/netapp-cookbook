@@ -62,4 +62,4 @@ License and Authors
 Authors:
   Dylan Myers <https://github.com/Dylan-M>
 
-License: This software is licensed under: ???
+License: See LICENSE
