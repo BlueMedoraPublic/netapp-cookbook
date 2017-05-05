@@ -13,6 +13,7 @@ default[:netapp][:ocum][:password] = "some_password"
 default[:netapp][:ocum][:port] = "8443"
   
 # Location of the installer media
-default[:netapp][:ocum][:media] = ''
+default[:netapp][:ocum][:media_name] = 'OnCommandUnifiedManager-rhel7-7.1'
+default[:netapp][:ocum][:media] = "/path/to/#{node[:netapp][:ocum][:media_name]}"
 
 default[:netapp][:ocum]

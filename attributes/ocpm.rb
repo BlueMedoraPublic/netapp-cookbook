@@ -13,6 +13,7 @@ default[:netapp][:ocpm][:password] = "some_password"
 default[:netapp][:ocpm][:port] = "8443"
   
 # Location of the installer media
-default[:netapp][:ocpm][:media] = ''
+default[:netapp][:ocpm][:media_name] = 'OnCommandPerformanceManager-7.1.el7.zip'
+default[:netapp][:ocpm][:media] = "/path/to/#{node[:netapp][:ocpm][:media_name]}"
 
 default[:netapp][:ocpm]
