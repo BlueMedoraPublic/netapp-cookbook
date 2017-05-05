@@ -15,6 +15,7 @@ execute "Unzip #{node[:netapp][:ocum][:media_name]}" do
   not_if do FileTest.directory?(zf[:path]) end
   command "unzip /tmp/#{node[:netapp][:ocum][:media_name]} -d ocum"
   cwd '/tmp'
+  not_if { ::File.exist?('/tmp/ocum') }
 end
 
 yum_package Dir['/tmp/ocum/*.rpm']
