@@ -9,12 +9,10 @@
 default[:netapp][:ocpm][:username] = "maint"
 default[:netapp][:ocpm][:password] = "some_password"
   
-# Port
-default[:netapp][:ocpm][:port] = "8443"
-  
 # Location of the installer media
 default[:netapp][:ocpm][:media_name] = 'OnCommandPerformanceManager-7.1.el7.zip'
 default[:netapp][:ocpm][:media_path] = '/path/to/'
 default[:netapp][:ocpm][:media] = "#{node[:netapp][:ocpm][:media_path]}#{node[:netapp][:ocpm][:media_name]}"
 
-default[:netapp][:ocpm]
+# Order of these packages is important
+default[:netapp][:ocpm][:pkgs] = [ 'ocie-serverbase', 'netapp-application-server', 'netapp-platform-base', 'ocie-server', 'ocie-au', 'ocf-server', 'netapp-opm' ]
