@@ -9,11 +9,10 @@
 default[:netapp][:ocum][:username] = "maint"
 default[:netapp][:ocum][:password] = "some_password"
   
-# Port
-default[:netapp][:ocum][:port] = "8443"
-  
 # Location of the installer media
-default[:netapp][:ocum][:media_name] = 'OnCommandUnifiedManager-rhel7-7.1'
-default[:netapp][:ocum][:media] = "/path/to/#{node[:netapp][:ocum][:media_name]}"
+default[:netapp][:ocum][:media_name] = 'OnCommandUnifiedManager-rhel7-7.1.zip'
+default[:netapp][:ocum][:media_path] = "/path/to/"
+default[:netapp][:ocum][:media] = "#{node[:netapp][:ocum][:media_path]}#{node[:netapp][:ocum][:media_name]}"
 
-default[:netapp][:ocum]
+# Order of these packages is important
+default[:netapp][:ocum][:pkgs] = [ 'ocie-serverbase', 'netapp-application-server', 'netapp-platform-base', 'ocie-server', 'ocie-au', 'node', 'rp', 'netapp-ocum' ]

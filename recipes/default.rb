@@ -14,9 +14,3 @@ include_recipe 'yum-epel::default'
 # Enable the RHEL 7 Oracle Java subscription repository
 # subscription-manager repos --enable rhel-7-server-thirdparty-oracle-java-rpms
 # This requires fixes to the redhat_subscription_manager cookbook first
-
-# Remove other versions of MySQL and MariaDB to prevent conflicts
-yum_package 'Remove other MySQL/MariaDB' do
-  action :remove
-  package_name [ "mysql", "mariadb" ]
-end

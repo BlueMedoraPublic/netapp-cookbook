@@ -15,7 +15,7 @@ unless ::File.exists?('/opt/netapp/essentials/bin/cert.sh')
   end
   
   remote_file "#{node[:netapp][:api][:tmp]}/#{node[:netapp][:api][:media_filename]}" do
-    source "file:///#{node[:netapp][:api][:media]}"
+    source "file://#{node[:netapp][:api][:media]}"
     owner 'root'
     group 'root'
     mode '0500'
