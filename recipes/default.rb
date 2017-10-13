@@ -6,7 +6,7 @@
 ##
 
 # Add & enable the MySQL 5.6 Community Repository
-include_recipe 'yum-mysql-community::mysql56'
+include_recipe node[:netapp][:mysql][:repo]
 
 # Add & enable the EPEL repository
 include_recipe 'yum-epel::default'
