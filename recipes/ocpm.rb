@@ -25,7 +25,7 @@ end
 # in the media_name attribute
 node[:netapp][:ocpm][:pkgs].each do |pkg|
   yum_package pkg do
-    source Dir.glob("/tmp/ocpm/#{pkg}*.rpm")[0]
+    source "/tmp/ocpm/#{pkg}"
   end
 end
 
