@@ -4,7 +4,7 @@ maintainer_email 'engops@bluemedora.com'
 license          'All rights reserved'
 description      'Installs/Configures NetApp Software'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.1'
+version          '0.1.2'
 depends          'yum-mysql-community'
 depends          'yum-epel'
 depends          'redhat_subscription_manager'

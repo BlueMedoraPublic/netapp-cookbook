@@ -5,8 +5,6 @@
 # Copyright 2017 Blue Medora
 ##
 
-include_recipe 'netapp::mysql'
-
 # Grab the zipped media from a file server
 # By default this grabs the media as distributed from NetApp in a zip file
 remote_file node[:netapp][:ocum][:media_name] do
